@@ -2,7 +2,8 @@
 -- Question 1: Write a query that gets the earliest account_open_date, along with the account_id, for each customer_id.
 SELECT
     c.customer_id,
-    DATE(MIN(a.account_open_date)) AS earliest_account_open_date
+    x.account_id,
+    DATE(MIN(a.account_open_date)) AS account_open_date
 FROM
     cust_tbl c
 JOIN
